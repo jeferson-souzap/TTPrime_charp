@@ -58,6 +58,7 @@
             groupBox4 = new GroupBox();
             label11 = new Label();
             richTextBox1 = new RichTextBox();
+            bt_fechar = new Button();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -67,6 +68,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(bt_fechar);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(button2);
             groupBox3.Controls.Add(button1);
@@ -349,6 +351,16 @@
             richTextBox1.TabIndex = 19;
             richTextBox1.Text = "";
             // 
+            // bt_fechar
+            // 
+            bt_fechar.Location = new Point(864, 15);
+            bt_fechar.Name = "bt_fechar";
+            bt_fechar.Size = new Size(75, 23);
+            bt_fechar.TabIndex = 17;
+            bt_fechar.Text = "Fechar";
+            bt_fechar.UseVisualStyleBackColor = true;
+            bt_fechar.Click += bt_fechar_Click;
+            // 
             // Form_ordem_prod
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -358,7 +370,7 @@
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox3);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_ordem_prod";
             Text = "Ordem de produção";
             groupBox3.ResumeLayout(false);
@@ -403,5 +415,6 @@
         private Label label10;
         private Label label11;
         private RichTextBox richTextBox1;
+        private Button bt_fechar;
     }
 }

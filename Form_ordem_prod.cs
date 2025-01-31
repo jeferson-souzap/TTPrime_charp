@@ -16,5 +16,10 @@ namespace TTPrime_charp
         {
             InitializeComponent();
         }
+
+        private void bt_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TTPrime_charp
 {
-    partial class Form_apon
+    partial class Form_apontamento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             groupBox3 = new GroupBox();
+            bt_fechar = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
             groupBox2 = new GroupBox();
             label9 = new Label();
             label8 = new Label();
@@ -66,41 +67,71 @@
             textBox9 = new TextBox();
             label16 = new Label();
             groupBox5 = new GroupBox();
+            comboBox4 = new ComboBox();
             textBox10 = new TextBox();
             label17 = new Label();
             label20 = new Label();
-            comboBox4 = new ComboBox();
             groupBox6 = new GroupBox();
-            comboBox5 = new ComboBox();
-            label18 = new Label();
+            textBox12 = new TextBox();
+            textBox14 = new TextBox();
             textBox11 = new TextBox();
+            label18 = new Label();
+            comboBox5 = new ComboBox();
             label21 = new Label();
+            label24 = new Label();
             label22 = new Label();
             textBox13 = new TextBox();
             label23 = new Label();
-            label24 = new Label();
-            textBox12 = new TextBox();
-            textBox14 = new TextBox();
+            groupBox7 = new GroupBox();
+            textBox16 = new TextBox();
+            textBox15 = new TextBox();
+            label19 = new Label();
+            label25 = new Label();
+            richTextBox1 = new RichTextBox();
+            groupBox8 = new GroupBox();
+            dateTimePicker5 = new DateTimePicker();
+            label29 = new Label();
+            dateTimePicker6 = new DateTimePicker();
+            label30 = new Label();
+            dateTimePicker4 = new DateTimePicker();
+            label26 = new Label();
+            dateTimePicker3 = new DateTimePicker();
+            label27 = new Label();
+            comboBox6 = new ComboBox();
+            label28 = new Label();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
+            groupBox7.SuspendLayout();
+            groupBox8.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(bt_fechar);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(button2);
             groupBox3.Controls.Add(button1);
             groupBox3.Dock = DockStyle.Bottom;
-            groupBox3.Location = new Point(0, 452);
+            groupBox3.Location = new Point(0, 473);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(954, 44);
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
             groupBox3.Text = "Linha de Botões";
+            // 
+            // bt_fechar
+            // 
+            bt_fechar.Location = new Point(860, 15);
+            bt_fechar.Name = "bt_fechar";
+            bt_fechar.Size = new Size(75, 23);
+            bt_fechar.TabIndex = 17;
+            bt_fechar.Text = "Fechar";
+            bt_fechar.UseVisualStyleBackColor = true;
+            bt_fechar.Click += this.bt_fechar_Click;
             // 
             // button3
             // 
@@ -142,22 +173,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = ".";
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(23, 15);
-            label1.TabIndex = 0;
-            label1.Text = "OP";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(75, 22);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(130, 23);
-            comboBox1.TabIndex = 6;
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 67);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Data Apon.";
             // 
             // dateTimePicker1
             // 
@@ -167,14 +190,22 @@
             dateTimePicker1.Size = new Size(130, 23);
             dateTimePicker1.TabIndex = 7;
             // 
-            // label2
+            // comboBox1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(3, 67);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Data Apon.";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(75, 22);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(130, 23);
+            comboBox1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(23, 15);
+            label1.TabIndex = 0;
+            label1.Text = "OP";
             // 
             // groupBox2
             // 
@@ -337,14 +368,15 @@
             groupBox4.Controls.Add(label16);
             groupBox4.Location = new Point(468, 127);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(410, 115);
+            groupBox4.Size = new Size(467, 115);
             groupBox4.TabIndex = 11;
             groupBox4.TabStop = false;
             groupBox4.Text = "Valores";
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(293, 78);
+            textBox7.BackColor = SystemColors.ControlLight;
+            textBox7.Location = new Point(305, 78);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(98, 23);
             textBox7.TabIndex = 17;
@@ -352,7 +384,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(215, 81);
+            label6.Location = new Point(227, 81);
             label6.Name = "label6";
             label6.Size = new Size(56, 15);
             label6.TabIndex = 16;
@@ -360,7 +392,8 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(293, 46);
+            textBox6.BackColor = SystemColors.ControlLight;
+            textBox6.Location = new Point(305, 46);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(98, 23);
             textBox6.TabIndex = 15;
@@ -368,7 +401,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(215, 49);
+            label12.Location = new Point(227, 49);
             label12.Name = "label12";
             label12.Size = new Size(72, 15);
             label12.TabIndex = 14;
@@ -376,6 +409,7 @@
             // 
             // textBox4
             // 
+            textBox4.BackColor = SystemColors.ControlLight;
             textBox4.Location = new Point(111, 78);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(98, 23);
@@ -392,6 +426,7 @@
             // 
             // textBox8
             // 
+            textBox8.BackColor = SystemColors.ControlLight;
             textBox8.Location = new Point(111, 49);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(98, 23);
@@ -408,8 +443,9 @@
             // 
             // comboBox3
             // 
+            comboBox3.BackColor = SystemColors.ControlLight;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(293, 16);
+            comboBox3.Location = new Point(305, 16);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(98, 23);
             comboBox3.TabIndex = 9;
@@ -417,7 +453,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(215, 19);
+            label15.Location = new Point(227, 19);
             label15.Name = "label15";
             label15.Size = new Size(54, 15);
             label15.TabIndex = 8;
@@ -425,6 +461,7 @@
             // 
             // textBox9
             // 
+            textBox9.BackColor = SystemColors.ControlLight;
             textBox9.Location = new Point(111, 16);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(98, 23);
@@ -447,10 +484,18 @@
             groupBox5.Controls.Add(label20);
             groupBox5.Location = new Point(12, 127);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(445, 115);
+            groupBox5.Size = new Size(450, 115);
             groupBox5.TabIndex = 10;
             groupBox5.TabStop = false;
             groupBox5.Text = "Cadastro";
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(102, 17);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(311, 23);
+            comboBox4.TabIndex = 19;
             // 
             // textBox10
             // 
@@ -464,9 +509,9 @@
             label17.AutoSize = true;
             label17.Location = new Point(8, 49);
             label17.Name = "label17";
-            label17.Size = new Size(58, 15);
+            label17.Size = new Size(94, 15);
             label17.TabIndex = 6;
-            label17.Text = "Descrição";
+            label17.Text = "Descrição / Peça";
             // 
             // label20
             // 
@@ -476,14 +521,6 @@
             label20.Size = new Size(65, 15);
             label20.TabIndex = 2;
             label20.Text = "Tipo / Item";
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(102, 17);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(311, 23);
-            comboBox4.TabIndex = 19;
             // 
             // groupBox6
             // 
@@ -497,20 +534,34 @@
             groupBox6.Controls.Add(label22);
             groupBox6.Controls.Add(textBox13);
             groupBox6.Controls.Add(label23);
-            groupBox6.Location = new Point(8, 272);
+            groupBox6.Location = new Point(12, 248);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(476, 156);
+            groupBox6.Size = new Size(450, 123);
             groupBox6.TabIndex = 22;
             groupBox6.TabStop = false;
             groupBox6.Text = "Apontamento";
             // 
-            // comboBox5
+            // textBox12
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(94, 16);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(212, 23);
-            comboBox5.TabIndex = 20;
+            textBox12.Location = new Point(314, 70);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(103, 23);
+            textBox12.TabIndex = 23;
+            // 
+            // textBox14
+            // 
+            textBox14.Location = new Point(314, 41);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(103, 23);
+            textBox14.TabIndex = 22;
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = SystemColors.ControlLight;
+            textBox11.Location = new Point(102, 70);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(103, 23);
+            textBox11.TabIndex = 16;
             // 
             // label18
             // 
@@ -521,27 +572,36 @@
             label18.TabIndex = 21;
             label18.Text = "Fases / Setores";
             // 
-            // textBox11
+            // comboBox5
             // 
-            textBox11.BackColor = SystemColors.ControlLight;
-            textBox11.Location = new Point(112, 83);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(103, 23);
-            textBox11.TabIndex = 16;
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(102, 12);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(212, 23);
+            comboBox5.TabIndex = 20;
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(21, 86);
+            label21.Location = new Point(9, 73);
             label21.Name = "label21";
             label21.Size = new Size(87, 15);
             label21.TabIndex = 15;
             label21.Text = "Peso Planejado";
             // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(8, 44);
+            label24.Name = "label24";
+            label24.Size = new Size(84, 15);
+            label24.TabIndex = 11;
+            label24.Text = "Qtd. Planejada";
+            // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(221, 57);
+            label22.Location = new Point(211, 44);
             label22.Name = "label22";
             label22.Size = new Size(86, 15);
             label22.TabIndex = 13;
@@ -550,7 +610,7 @@
             // textBox13
             // 
             textBox13.BackColor = SystemColors.ControlLight;
-            textBox13.Location = new Point(112, 54);
+            textBox13.Location = new Point(102, 41);
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(103, 23);
             textBox13.TabIndex = 12;
@@ -558,48 +618,185 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(221, 86);
+            label23.Location = new Point(211, 73);
             label23.Name = "label23";
             label23.Size = new Size(89, 15);
             label23.TabIndex = 17;
             label23.Text = "Peso Produzido";
             // 
-            // label24
+            // groupBox7
             // 
-            label24.AutoSize = true;
-            label24.Location = new Point(22, 57);
-            label24.Name = "label24";
-            label24.Size = new Size(84, 15);
-            label24.TabIndex = 11;
-            label24.Text = "Qtd. Planejada";
+            groupBox7.Controls.Add(textBox16);
+            groupBox7.Controls.Add(textBox15);
+            groupBox7.Controls.Add(label19);
+            groupBox7.Controls.Add(label25);
+            groupBox7.Location = new Point(468, 248);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(467, 123);
+            groupBox7.TabIndex = 23;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "Apontamento Corte";
             // 
-            // textBox12
+            // textBox16
             // 
-            textBox12.Location = new Point(314, 83);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(103, 23);
-            textBox12.TabIndex = 23;
+            textBox16.Location = new Point(114, 17);
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(130, 23);
+            textBox16.TabIndex = 8;
             // 
-            // textBox14
+            // textBox15
             // 
-            textBox14.Location = new Point(314, 54);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(103, 23);
-            textBox14.TabIndex = 22;
+            textBox15.Location = new Point(114, 46);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(130, 23);
+            textBox15.TabIndex = 7;
             // 
-            // Form_apon
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(8, 49);
+            label19.Name = "label19";
+            label19.Size = new Size(90, 15);
+            label19.TabIndex = 6;
+            label19.Text = "Angulo da Peça";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(8, 20);
+            label25.Name = "label25";
+            label25.Size = new Size(100, 15);
+            label25.TabIndex = 2;
+            label25.Text = "Tamanho da Peça";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(666, 378);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(269, 92);
+            richTextBox1.TabIndex = 24;
+            richTextBox1.Text = "";
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(dateTimePicker5);
+            groupBox8.Controls.Add(label29);
+            groupBox8.Controls.Add(dateTimePicker6);
+            groupBox8.Controls.Add(label30);
+            groupBox8.Controls.Add(dateTimePicker4);
+            groupBox8.Controls.Add(label26);
+            groupBox8.Controls.Add(dateTimePicker3);
+            groupBox8.Controls.Add(label27);
+            groupBox8.Controls.Add(comboBox6);
+            groupBox8.Controls.Add(label28);
+            groupBox8.Location = new Point(12, 377);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(648, 93);
+            groupBox8.TabIndex = 24;
+            groupBox8.TabStop = false;
+            groupBox8.Text = ".";
+            // 
+            // dateTimePicker5
+            // 
+            dateTimePicker5.Format = DateTimePickerFormat.Time;
+            dateTimePicker5.Location = new Point(504, 47);
+            dateTimePicker5.Name = "dateTimePicker5";
+            dateTimePicker5.Size = new Size(126, 23);
+            dateTimePicker5.TabIndex = 28;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(444, 51);
+            label29.Name = "label29";
+            label29.Size = new Size(56, 15);
+            label29.TabIndex = 27;
+            label29.Text = "Hora Fim";
+            // 
+            // dateTimePicker6
+            // 
+            dateTimePicker6.Format = DateTimePickerFormat.Time;
+            dateTimePicker6.Location = new Point(312, 47);
+            dateTimePicker6.Name = "dateTimePicker6";
+            dateTimePicker6.Size = new Size(126, 23);
+            dateTimePicker6.TabIndex = 26;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(240, 51);
+            label30.Name = "label30";
+            label30.Size = new Size(65, 15);
+            label30.TabIndex = 25;
+            label30.Text = "Hora Inicio";
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Format = DateTimePickerFormat.Short;
+            dateTimePicker4.Location = new Point(505, 16);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(126, 23);
+            dateTimePicker4.TabIndex = 24;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(445, 20);
+            label26.Name = "label26";
+            label26.Size = new Size(54, 15);
+            label26.TabIndex = 23;
+            label26.Text = "Data Fim";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(313, 16);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(126, 23);
+            dateTimePicker3.TabIndex = 22;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(241, 20);
+            label27.Name = "label27";
+            label27.Size = new Size(66, 15);
+            label27.TabIndex = 21;
+            label27.Text = "Data Inicio:";
+            // 
+            // comboBox6
+            // 
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(86, 16);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(149, 23);
+            comboBox6.TabIndex = 20;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(8, 20);
+            label28.Name = "label28";
+            label28.Size = new Size(72, 15);
+            label28.TabIndex = 2;
+            label28.Text = "Responsavel";
+            // 
+            // Form_apontamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(954, 496);
+            ClientSize = new Size(954, 517);
+            Controls.Add(groupBox8);
+            Controls.Add(richTextBox1);
+            Controls.Add(groupBox7);
             Controls.Add(groupBox6);
             Controls.Add(groupBox4);
             Controls.Add(groupBox5);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "Form_apon";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Form_apontamento";
             Text = "Apontamento";
             groupBox3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
@@ -612,6 +809,10 @@
             groupBox5.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
+            groupBox8.ResumeLayout(false);
+            groupBox8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -670,5 +871,23 @@
         private Label label23;
         private TextBox textBox12;
         private TextBox textBox14;
+        private GroupBox groupBox7;
+        private TextBox textBox16;
+        private TextBox textBox15;
+        private Label label19;
+        private Label label25;
+        private RichTextBox richTextBox1;
+        private GroupBox groupBox8;
+        private ComboBox comboBox6;
+        private Label label28;
+        private DateTimePicker dateTimePicker5;
+        private Label label29;
+        private DateTimePicker dateTimePicker6;
+        private Label label30;
+        private DateTimePicker dateTimePicker4;
+        private Label label26;
+        private DateTimePicker dateTimePicker3;
+        private Label label27;
+        private Button bt_fechar;
     }
 }

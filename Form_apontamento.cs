@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace TTPrime_charp
 {
-    public partial class Form_apon : Form
+    public partial class Form_apontamento : Form
     {
-        public Form_apon()
+        public Form_apontamento()
         {
             InitializeComponent();
         }
+
+        private void bt_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
     }
 }

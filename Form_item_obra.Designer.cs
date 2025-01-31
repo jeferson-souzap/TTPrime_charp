@@ -56,6 +56,7 @@
             label7 = new Label();
             textBox3 = new TextBox();
             label6 = new Label();
+            bt_fechar = new Button();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(bt_fechar);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(button2);
             groupBox3.Controls.Add(button1);
@@ -326,6 +328,16 @@
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
             // 
+            // bt_fechar
+            // 
+            bt_fechar.Location = new Point(864, 15);
+            bt_fechar.Name = "bt_fechar";
+            bt_fechar.Size = new Size(75, 23);
+            bt_fechar.TabIndex = 17;
+            bt_fechar.Text = "Fechar";
+            bt_fechar.UseVisualStyleBackColor = true;
+            bt_fechar.Click += bt_fechar_Click;
+            // 
             // Form_item_obra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -335,7 +347,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_item_obra";
             Text = "Items da Obra";
             groupBox3.ResumeLayout(false);
@@ -378,5 +390,6 @@
         private Label label7;
         private TextBox textBox3;
         private Label label6;
+        private Button bt_fechar;
     }
 }
