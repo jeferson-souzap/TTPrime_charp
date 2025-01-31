@@ -30,9 +30,9 @@
         {
             groupBox3 = new GroupBox();
             bt_fechar = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            bt_cancelar = new Button();
+            bt_salvar = new Button();
+            bt_iniciar = new Button();
             groupBox1 = new GroupBox();
             label2 = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -112,9 +112,9 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(bt_fechar);
-            groupBox3.Controls.Add(button3);
-            groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(bt_cancelar);
+            groupBox3.Controls.Add(bt_salvar);
+            groupBox3.Controls.Add(bt_iniciar);
             groupBox3.Dock = DockStyle.Bottom;
             groupBox3.Location = new Point(0, 473);
             groupBox3.Name = "groupBox3";
@@ -131,34 +131,38 @@
             bt_fechar.TabIndex = 17;
             bt_fechar.Text = "Fechar";
             bt_fechar.UseVisualStyleBackColor = true;
-            bt_fechar.Click += this.bt_fechar_Click;
+            bt_fechar.Click += bt_fechar_Click;
             // 
-            // button3
+            // bt_cancelar
             // 
-            button3.Location = new Point(194, 15);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 16;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
+            bt_cancelar.Location = new Point(194, 15);
+            bt_cancelar.Name = "bt_cancelar";
+            bt_cancelar.Size = new Size(75, 23);
+            bt_cancelar.TabIndex = 16;
+            bt_cancelar.Text = "Cancelar";
+            bt_cancelar.UseVisualStyleBackColor = true;
+            bt_cancelar.Click += bt_cancelar_Click;
             // 
-            // button2
+            // bt_salvar
             // 
-            button2.Location = new Point(103, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Salvar";
-            button2.UseVisualStyleBackColor = true;
+            bt_salvar.BackColor = Color.Cyan;
+            bt_salvar.Location = new Point(103, 15);
+            bt_salvar.Name = "bt_salvar";
+            bt_salvar.Size = new Size(75, 23);
+            bt_salvar.TabIndex = 2;
+            bt_salvar.Text = "Salvar";
+            bt_salvar.UseVisualStyleBackColor = false;
+            bt_salvar.Click += bt_salvar_Click;
             // 
-            // button1
+            // bt_iniciar
             // 
-            button1.Location = new Point(16, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 15;
-            button1.Text = "Iniciar";
-            button1.UseVisualStyleBackColor = true;
+            bt_iniciar.Location = new Point(16, 15);
+            bt_iniciar.Name = "bt_iniciar";
+            bt_iniciar.Size = new Size(75, 23);
+            bt_iniciar.TabIndex = 15;
+            bt_iniciar.Text = "Iniciar";
+            bt_iniciar.UseVisualStyleBackColor = true;
+            bt_iniciar.Click += bt_iniciar_Click;
             // 
             // groupBox1
             // 
@@ -819,9 +823,9 @@
         #endregion
 
         private GroupBox groupBox3;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button bt_cancelar;
+        private Button bt_salvar;
+        private Button bt_iniciar;
         private GroupBox groupBox1;
         private Label label2;
         private DateTimePicker dateTimePicker1;

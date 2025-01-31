@@ -43,5 +43,10 @@ namespace TTPrime_charp
         {
             abrir_janelas(new Form_apontamento());
         }
+
+        private void bt_historico_obra_Click(object sender, EventArgs e)
+        {
+            abrir_janelas(new Form_historico_obra());
+        }
     }
 }

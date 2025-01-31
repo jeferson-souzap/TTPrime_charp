@@ -83,6 +83,7 @@
             bt_historico_obra.TabIndex = 5;
             bt_historico_obra.Text = "Histório Obras";
             bt_historico_obra.UseVisualStyleBackColor = true;
+            bt_historico_obra.Click += bt_historico_obra_Click;
             // 
             // bt_apontamento
             // 

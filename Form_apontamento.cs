@@ -17,11 +17,28 @@ namespace TTPrime_charp
             InitializeComponent();
         }
 
+        #region Area dos botões
+
         private void bt_fechar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        private void bt_iniciar_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void bt_salvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }
