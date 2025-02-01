@@ -117,59 +117,59 @@ namespace TTPrime_charp
 
         private void Salvar_obra_db()
         {
-
-            if(Verificar_campos_vazios(text_nome_obra, text_cliente_obra, text_id_obra, text_item_obra))
-            {
-                MessageBox.Show("Preencher todos os campos!");
-                return;
-            }
-
-
+                       
             DateTime dt_entrada = date_cadastro_obra.Value.Date;
             string status = combo_status_obra.Text;
             string nome_obra = text_nome_obra.Text;
             string nome_cliente = text_cliente_obra.Text;
             string id_obra = text_id_obra.Text;
-            string item_obra = text_item_obra.Text
+            string item_obra = text_item_obra.Text;
             double qtd_itens = Convert.ToDouble(text_qtd_item.Text);
             string id_projeto = lb_id_projeto.Text;
-
             
-
-
             try
             {
                 string conecta_string = Properties.Settings.Default.string_db;
                 MySqlConnection connection = new MySqlConnection(conecta_string);
-                connection.Open();
+                
 
                 string comando_sql;
-
-                comando_sql = "INSERT INTO sua_tabela(status, dt_entrada, nome_obra, nome_cliente, id_obra, item_obra, qtd_itens, id_projeto) " +
-                     "VALUES('" + status + "','" + dt_entrada.ToString("yyyy-MM-dd") + "','" + nome_obra + "','" + nome_cliente + "','" + id_obra + "','" + item_obra + "','" + Convert.ToString(qtd_itens).Replace(',', '.') + "','" + id_projeto + "')";
-
-                MySqlCommand cmd = new MySqlCommand(comando_sql, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
+                
+                comando_sql = "INSERT INTO tb_cad_obra(status, dt_entrada, nome_obra, nome_cliente, id_obra, item_obra, qtd_itens, id_projeto) " +
+                         "VALUES(@status, @dt_entrada, @nome_obra, @nome_cliente, @id_obra, @item_obra, @qtd_itens, @id_projeto)";
 
 
-                MessageBox.Show("Salvo com Sucesso!!");
-                Carregar_grid_obras();
 
+                using (MySqlCommand cmd = new MySqlCommand(comando_sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@status", status);
+                    cmd.Parameters.AddWithValue("@dt_entrada", dt_entrada.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@nome_obra", nome_obra);
+                    cmd.Parameters.AddWithValue("@nome_cliente", nome_cliente);
+                    cmd.Parameters.AddWithValue("@id_obra", id_obra);
+                    cmd.Parameters.AddWithValue("@item_obra", item_obra);
+                    cmd.Parameters.AddWithValue("@qtd_itens", Convert.ToString(qtd_itens).Replace(',', '.'));
+                    cmd.Parameters.AddWithValue("@id_projeto", id_projeto);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+
+
+                    MessageBox.Show("Salvo com Sucesso!!");
+                }
 
             }
             catch (Exception Erro)
             {
                 MessageBox.Show(Erro.Message + "\r\n Erro ao salvar o apontamento");
+                return;
                 
             }
-
-
-
         }
 
 
-
+        #endregion
 
         #region Area dos botões
 
@@ -180,7 +180,15 @@ namespace TTPrime_charp
 
         private void bt_salvar_obra_Click(object sender, EventArgs e)
         {
+            if (Verificar_campos_vazios(text_nome_obra, text_cliente_obra, text_id_obra, text_item_obra, text_qtd_item))
+            {
+                MessageBox.Show("Preencher todos os campos!");
+                return;
+            }
 
+            Salvar_obra_db();
+            Carregar_grid_obras();
+            
         }
 
         private void bt_deletar_obra_Click(object sender, EventArgs e)

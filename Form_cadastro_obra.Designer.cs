@@ -115,10 +115,12 @@
             // 
             // text_qtd_item
             // 
+            text_qtd_item.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             text_qtd_item.Location = new Point(528, 69);
             text_qtd_item.Name = "text_qtd_item";
             text_qtd_item.Size = new Size(94, 23);
             text_qtd_item.TabIndex = 7;
+            text_qtd_item.Text = "0";
             // 
             // label7
             // 
@@ -239,12 +241,15 @@
             // 
             // grid_lista_obras
             // 
+            grid_lista_obras.AllowUserToAddRows = false;
             grid_lista_obras.BackgroundColor = SystemColors.ControlLight;
             grid_lista_obras.BorderStyle = BorderStyle.Fixed3D;
             grid_lista_obras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grid_lista_obras.Dock = DockStyle.Fill;
             grid_lista_obras.Location = new Point(3, 19);
             grid_lista_obras.Name = "grid_lista_obras";
+            grid_lista_obras.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            grid_lista_obras.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             grid_lista_obras.Size = new Size(928, 297);
             grid_lista_obras.TabIndex = 0;
             // 
