@@ -1,3 +1,7 @@
+using System.Configuration;
+using System;
+using MySqlConnector;
+
 namespace TTPrime_charp
 {
     public partial class Form_home : Form
@@ -5,7 +9,39 @@ namespace TTPrime_charp
         public Form_home()
         {
             InitializeComponent();
+
+            Testar_banco_dados();
         }
+
+        #region Area de funções / metodos
+
+        private void Testar_banco_dados()
+        {
+
+            try
+            {
+                
+                string stringdb = Properties.Settings.Default.string_db;
+
+                using (MySqlConnection conexao = new MySqlConnection(stringdb))
+                {
+                    conexao.Open();
+                    lb_status_banco.Text =("Conexão bem-sucedida!");
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                lb_status_banco.Text =($"Erro ao conectar: {ex.Message}");
+            }
+        }
+            
+        
+
+
+
+        #endregion
+
 
         #region Metodos da janela
         private void abrir_janelas(object formularios)

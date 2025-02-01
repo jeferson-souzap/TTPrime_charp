@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel_inferior = new Panel();
+            lb_status_banco = new Label();
             panel_esquerdo = new Panel();
             bt_configuracao = new Button();
             bt_historico_obra = new Button();
@@ -38,17 +39,28 @@
             bt_cadastro_obra = new Button();
             pictureBox1 = new PictureBox();
             panel_central = new Panel();
+            panel_inferior.SuspendLayout();
             panel_esquerdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel_inferior
             // 
+            panel_inferior.Controls.Add(lb_status_banco);
             panel_inferior.Dock = DockStyle.Bottom;
             panel_inferior.Location = new Point(0, 558);
             panel_inferior.Name = "panel_inferior";
             panel_inferior.Size = new Size(1137, 30);
             panel_inferior.TabIndex = 0;
+            // 
+            // lb_status_banco
+            // 
+            lb_status_banco.AutoSize = true;
+            lb_status_banco.Location = new Point(958, 6);
+            lb_status_banco.Name = "lb_status_banco";
+            lb_status_banco.Size = new Size(91, 15);
+            lb_status_banco.TabIndex = 0;
+            lb_status_banco.Text = "Banco de dados";
             // 
             // panel_esquerdo
             // 
@@ -153,6 +165,8 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "Form_home";
             Text = "PRIME";
+            panel_inferior.ResumeLayout(false);
+            panel_inferior.PerformLayout();
             panel_esquerdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -170,5 +184,6 @@
         private PictureBox pictureBox1;
         private Button bt_configuracao;
         private Button bt_historico_obra;
+        private Label lb_status_banco;
     }
 }

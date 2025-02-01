@@ -29,53 +29,54 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button4 = new Button();
-            label8 = new Label();
-            textBox5 = new TextBox();
+            label9 = new Label();
+            bt_filtrar_obra = new Button();
+            lb_id_projeto = new Label();
+            text_qtd_item = new TextBox();
             label7 = new Label();
-            textBox4 = new TextBox();
+            text_item_obra = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            text_cliente_obra = new TextBox();
             label5 = new Label();
-            textBox2 = new TextBox();
+            text_id_obra = new TextBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            text_nome_obra = new TextBox();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            combo_status_obra = new ComboBox();
             label2 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            date_cadastro_obra = new DateTimePicker();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            grid_lista_obras = new DataGridView();
+            bt_salvar_obra = new Button();
+            bt_deletar_obra = new Button();
             groupBox3 = new GroupBox();
-            button3 = new Button();
-            label9 = new Label();
+            bt_fechar = new Button();
+            bt_cancelar_obra = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)grid_lista_obras).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(bt_filtrar_obra);
+            groupBox1.Controls.Add(lb_id_projeto);
+            groupBox1.Controls.Add(text_qtd_item);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(text_item_obra);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(text_cliente_obra);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(text_id_obra);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(text_nome_obra);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(combo_status_obra);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(date_cadastro_obra);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(8, 12);
             groupBox1.Name = "groupBox1";
@@ -84,31 +85,40 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Area de Cadastro";
             // 
-            // button4
+            // label9
             // 
-            button4.Location = new Point(853, 80);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 17;
-            button4.Text = "Filtrar";
-            button4.UseVisualStyleBackColor = true;
+            label9.AutoSize = true;
+            label9.Location = new Point(446, 19);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 15);
+            label9.TabIndex = 18;
+            label9.Text = "ID - Projeto";
             // 
-            // label8
+            // bt_filtrar_obra
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(520, 16);
-            label8.Name = "label8";
-            label8.Size = new Size(155, 15);
-            label8.TabIndex = 14;
-            label8.Text = "Nome obra + Fase da obra";
+            bt_filtrar_obra.Location = new Point(853, 80);
+            bt_filtrar_obra.Name = "bt_filtrar_obra";
+            bt_filtrar_obra.Size = new Size(75, 23);
+            bt_filtrar_obra.TabIndex = 17;
+            bt_filtrar_obra.Text = "Filtrar";
+            bt_filtrar_obra.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // lb_id_projeto
             // 
-            textBox5.Location = new Point(528, 69);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(94, 23);
-            textBox5.TabIndex = 13;
+            lb_id_projeto.AutoSize = true;
+            lb_id_projeto.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_id_projeto.Location = new Point(520, 16);
+            lb_id_projeto.Name = "lb_id_projeto";
+            lb_id_projeto.Size = new Size(155, 15);
+            lb_id_projeto.TabIndex = 14;
+            lb_id_projeto.Text = "Nome obra + Fase da obra";
+            // 
+            // text_qtd_item
+            // 
+            text_qtd_item.Location = new Point(528, 69);
+            text_qtd_item.Name = "text_qtd_item";
+            text_qtd_item.Size = new Size(94, 23);
+            text_qtd_item.TabIndex = 7;
             // 
             // label7
             // 
@@ -119,28 +129,28 @@
             label7.TabIndex = 12;
             label7.Text = "Quantidade:";
             // 
-            // textBox4
+            // text_item_obra
             // 
-            textBox4.Location = new Point(693, 40);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(235, 23);
-            textBox4.TabIndex = 11;
+            text_item_obra.Location = new Point(710, 40);
+            text_item_obra.Name = "text_item_obra";
+            text_item_obra.Size = new Size(218, 23);
+            text_item_obra.TabIndex = 6;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(628, 48);
             label6.Name = "label6";
-            label6.Size = new Size(59, 15);
+            label6.Size = new Size(76, 15);
             label6.TabIndex = 10;
-            label6.Text = "Fase Obra";
+            label6.Text = "Item da Obra";
             // 
-            // textBox3
+            // text_cliente_obra
             // 
-            textBox3.Location = new Point(97, 71);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(339, 23);
-            textBox3.TabIndex = 9;
+            text_cliente_obra.Location = new Point(97, 71);
+            text_cliente_obra.Name = "text_cliente_obra";
+            text_cliente_obra.Size = new Size(339, 23);
+            text_cliente_obra.TabIndex = 4;
             // 
             // label5
             // 
@@ -151,12 +161,12 @@
             label5.TabIndex = 8;
             label5.Text = "Cliente";
             // 
-            // textBox2
+            // text_id_obra
             // 
-            textBox2.Location = new Point(528, 40);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(94, 23);
-            textBox2.TabIndex = 7;
+            text_id_obra.Location = new Point(528, 40);
+            text_id_obra.Name = "text_id_obra";
+            text_id_obra.Size = new Size(94, 23);
+            text_id_obra.TabIndex = 5;
             // 
             // label4
             // 
@@ -167,12 +177,12 @@
             label4.TabIndex = 6;
             label4.Text = "ID - Obra";
             // 
-            // textBox1
+            // text_nome_obra
             // 
-            textBox1.Location = new Point(97, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(339, 23);
-            textBox1.TabIndex = 5;
+            text_nome_obra.Location = new Point(97, 42);
+            text_nome_obra.Name = "text_nome_obra";
+            text_nome_obra.Size = new Size(339, 23);
+            text_nome_obra.TabIndex = 3;
             // 
             // label3
             // 
@@ -183,13 +193,13 @@
             label3.TabIndex = 4;
             label3.Text = "Nome da Obra";
             // 
-            // comboBox1
+            // combo_status_obra
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(284, 13);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(152, 23);
-            comboBox1.TabIndex = 3;
+            combo_status_obra.FormattingEnabled = true;
+            combo_status_obra.Location = new Point(284, 13);
+            combo_status_obra.Name = "combo_status_obra";
+            combo_status_obra.Size = new Size(152, 23);
+            combo_status_obra.TabIndex = 2;
             // 
             // label2
             // 
@@ -200,13 +210,13 @@
             label2.TabIndex = 2;
             label2.Text = "Status";
             // 
-            // dateTimePicker1
+            // date_cadastro_obra
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(97, 13);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(126, 23);
-            dateTimePicker1.TabIndex = 1;
+            date_cadastro_obra.Format = DateTimePickerFormat.Short;
+            date_cadastro_obra.Location = new Point(97, 13);
+            date_cadastro_obra.Name = "date_cadastro_obra";
+            date_cadastro_obra.Size = new Size(126, 23);
+            date_cadastro_obra.TabIndex = 1;
             // 
             // label1
             // 
@@ -219,7 +229,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(grid_lista_obras);
             groupBox2.Location = new Point(8, 127);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(934, 319);
@@ -227,38 +237,43 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Lista de Obras";
             // 
-            // dataGridView1
+            // grid_lista_obras
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 19);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(928, 297);
-            dataGridView1.TabIndex = 0;
+            grid_lista_obras.BackgroundColor = SystemColors.ControlLight;
+            grid_lista_obras.BorderStyle = BorderStyle.Fixed3D;
+            grid_lista_obras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid_lista_obras.Dock = DockStyle.Fill;
+            grid_lista_obras.Location = new Point(3, 19);
+            grid_lista_obras.Name = "grid_lista_obras";
+            grid_lista_obras.Size = new Size(928, 297);
+            grid_lista_obras.TabIndex = 0;
             // 
-            // button1
+            // bt_salvar_obra
             // 
-            button1.Location = new Point(16, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 15;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
+            bt_salvar_obra.Location = new Point(16, 15);
+            bt_salvar_obra.Name = "bt_salvar_obra";
+            bt_salvar_obra.Size = new Size(75, 23);
+            bt_salvar_obra.TabIndex = 15;
+            bt_salvar_obra.Text = "Salvar";
+            bt_salvar_obra.UseVisualStyleBackColor = true;
+            bt_salvar_obra.Click += bt_salvar_obra_Click;
             // 
-            // button2
+            // bt_deletar_obra
             // 
-            button2.Location = new Point(103, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Deletar";
-            button2.UseVisualStyleBackColor = true;
+            bt_deletar_obra.Location = new Point(103, 15);
+            bt_deletar_obra.Name = "bt_deletar_obra";
+            bt_deletar_obra.Size = new Size(75, 23);
+            bt_deletar_obra.TabIndex = 2;
+            bt_deletar_obra.Text = "Deletar";
+            bt_deletar_obra.UseVisualStyleBackColor = true;
+            bt_deletar_obra.Click += bt_deletar_obra_Click;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button3);
-            groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(bt_fechar);
+            groupBox3.Controls.Add(bt_cancelar_obra);
+            groupBox3.Controls.Add(bt_deletar_obra);
+            groupBox3.Controls.Add(bt_salvar_obra);
             groupBox3.Dock = DockStyle.Bottom;
             groupBox3.Location = new Point(0, 452);
             groupBox3.Name = "groupBox3";
@@ -267,23 +282,25 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Linha de Botões";
             // 
-            // button3
+            // bt_fechar
             // 
-            button3.Location = new Point(194, 15);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 16;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
+            bt_fechar.Location = new Point(861, 15);
+            bt_fechar.Name = "bt_fechar";
+            bt_fechar.Size = new Size(75, 23);
+            bt_fechar.TabIndex = 17;
+            bt_fechar.Text = "Fechar";
+            bt_fechar.UseVisualStyleBackColor = true;
+            bt_fechar.Click += bt_fechar_Click;
             // 
-            // label9
+            // bt_cancelar_obra
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(446, 19);
-            label9.Name = "label9";
-            label9.Size = new Size(67, 15);
-            label9.TabIndex = 18;
-            label9.Text = "ID - Projeto";
+            bt_cancelar_obra.Location = new Point(194, 15);
+            bt_cancelar_obra.Name = "bt_cancelar_obra";
+            bt_cancelar_obra.Size = new Size(75, 23);
+            bt_cancelar_obra.TabIndex = 16;
+            bt_cancelar_obra.Text = "Cancelar";
+            bt_cancelar_obra.UseVisualStyleBackColor = true;
+            bt_cancelar_obra.Click += bt_cancelar_obra_Click;
             // 
             // Form_cadastro_obra
             // 
@@ -293,13 +310,13 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_cadastro_obra";
             Text = "Cadastro de Obra";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grid_lista_obras).EndInit();
             groupBox3.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -309,26 +326,27 @@
         private GroupBox groupBox1;
         private Label label1;
         private GroupBox groupBox2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker date_cadastro_obra;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox text_nome_obra;
         private Label label3;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
+        private ComboBox combo_status_obra;
+        private TextBox text_id_obra;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox text_cliente_obra;
         private Label label5;
-        private Button button2;
-        private Button button1;
-        private Label label8;
-        private TextBox textBox5;
+        private Button bt_deletar_obra;
+        private Button bt_salvar_obra;
+        private Label lb_id_projeto;
+        private TextBox text_qtd_item;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox text_item_obra;
         private Label label6;
         private GroupBox groupBox3;
-        private Button button3;
-        private DataGridView dataGridView1;
-        private Button button4;
+        private Button bt_cancelar_obra;
+        private DataGridView grid_lista_obras;
+        private Button bt_filtrar_obra;
         private Label label9;
+        private Button bt_fechar;
     }
 }
