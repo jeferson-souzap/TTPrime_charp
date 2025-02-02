@@ -97,7 +97,21 @@ namespace TTPrime_charp
         #endregion Controles
 
 
-        #region Metodos Salvar / Cancelar / Deletar
+        #region Metodos Salvar / Cancelar / Deletar / Carregar
+
+
+        private void Limpar_controles()
+        {
+            date_cadastro_obra.Value = DateTime.Now;
+            combo_status_obra.Text = string.Empty;
+            text_nome_obra.Text = string.Empty;
+            text_cliente_obra.Text = string.Empty;
+            text_id_obra.Text = string.Empty;
+            text_item_obra.Text = string.Empty;
+            text_qtd_item.Text = "0";
+            lb_id_projeto.Text = string.Empty;
+        }
+
 
         private bool Verificar_campos_vazios(params System.Windows.Forms.TextBox[] textBoxes)
         {
@@ -113,28 +127,68 @@ namespace TTPrime_charp
 
         }
 
+        private void Carregar_campos_obra(string id_obra_db)
+        {
+            try
+            {
+                string conecta_string = Properties.Settings.Default.string_db;
+                string comando_sql = "select * from tb_cad_obra where id =" + Convert.ToInt32(id_obra_db) + "";
+
+
+                MySqlConnection conexao = new MySqlConnection(conecta_string);
+                MySqlCommand cmd = new MySqlCommand(comando_sql, conexao);
+                MySqlDataReader myreader;
+                conexao.Open();
+
+                myreader = cmd.ExecuteReader();
+
+                while (myreader.Read())
+                {
+
+                    date_cadastro_obra.Value = Convert.ToDateTime(myreader["dt_entrada"]);
+                    combo_status_obra.Text = myreader["status"].ToString();
+                    text_nome_obra.Text = myreader["nome_obra"].ToString();
+                    text_cliente_obra.Text = myreader["nome_cliente"].ToString();
+                    text_id_obra.Text = myreader["id_obra"].ToString();
+                    text_item_obra.Text = myreader["item_obra"].ToString();
+                    text_qtd_item.Text = myreader["qtd_itens"].ToString();
+                    lb_id_projeto.Text = myreader["id_projeto"].ToString();
+
+                }
+
+                conexao.Close();
+
+
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.Message);
+                
+            }
+
+        }
 
 
         private void Salvar_obra_db()
         {
-                       
+
             DateTime dt_entrada = date_cadastro_obra.Value.Date;
-            string status = combo_status_obra.Text;
-            string nome_obra = text_nome_obra.Text;
-            string nome_cliente = text_cliente_obra.Text;
-            string id_obra = text_id_obra.Text;
-            string item_obra = text_item_obra.Text;
+            string status = combo_status_obra.Text.ToUpper();
+            string nome_obra = text_nome_obra.Text.ToUpper();
+            string nome_cliente = text_cliente_obra.Text.ToUpper();
+            string id_obra = text_id_obra.Text.ToUpper();
+            string item_obra = text_item_obra.Text.ToUpper();
             double qtd_itens = Convert.ToDouble(text_qtd_item.Text);
-            string id_projeto = lb_id_projeto.Text;
-            
+            string id_projeto = lb_id_projeto.Text.ToUpper();
+
             try
             {
                 string conecta_string = Properties.Settings.Default.string_db;
                 MySqlConnection connection = new MySqlConnection(conecta_string);
-                
+
 
                 string comando_sql;
-                
+
                 comando_sql = "INSERT INTO tb_cad_obra(status, dt_entrada, nome_obra, nome_cliente, id_obra, item_obra, qtd_itens, id_projeto) " +
                          "VALUES(@status, @dt_entrada, @nome_obra, @nome_cliente, @id_obra, @item_obra, @qtd_itens, @id_projeto)";
 
@@ -157,6 +211,7 @@ namespace TTPrime_charp
 
 
                     MessageBox.Show("Salvo com Sucesso!!");
+                    Limpar_controles();
                 }
 
             }
@@ -164,12 +219,25 @@ namespace TTPrime_charp
             {
                 MessageBox.Show(Erro.Message + "\r\n Erro ao salvar o apontamento");
                 return;
-                
+
             }
         }
 
+        private void Editar_obra()
+        {
+
+        }
+
+        private void Deletar_obra()
+        {
+
+        }
 
         #endregion
+
+
+
+
 
         #region Area dos botões
 
@@ -188,7 +256,7 @@ namespace TTPrime_charp
 
             Salvar_obra_db();
             Carregar_grid_obras();
-            
+
         }
 
         private void bt_deletar_obra_Click(object sender, EventArgs e)
@@ -201,5 +269,22 @@ namespace TTPrime_charp
 
         }
         #endregion
+
+
+
+
+
+        private void text_item_obra_Leave(object sender, EventArgs e)
+        {
+            lb_id_projeto.Text = text_nome_obra.Text + text_item_obra.Text;
+        }
+
+        private void grid_lista_obras_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id_banco_obra = grid_lista_obras.CurrentRow.Cells[0].Value.ToString();
+            Carregar_campos_obra(id_banco_obra);
+            
+
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            lb_id_banco = new Label();
             label9 = new Label();
             bt_filtrar_obra = new Button();
             lb_id_projeto = new Label();
@@ -61,6 +62,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lb_id_banco);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(bt_filtrar_obra);
             groupBox1.Controls.Add(lb_id_projeto);
@@ -84,6 +86,15 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Area de Cadastro";
+            // 
+            // lb_id_banco
+            // 
+            lb_id_banco.AutoSize = true;
+            lb_id_banco.Location = new Point(853, 16);
+            lb_id_banco.Name = "lb_id_banco";
+            lb_id_banco.Size = new Size(18, 15);
+            lb_id_banco.TabIndex = 19;
+            lb_id_banco.Text = "ID";
             // 
             // label9
             // 
@@ -109,9 +120,9 @@
             lb_id_projeto.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lb_id_projeto.Location = new Point(520, 16);
             lb_id_projeto.Name = "lb_id_projeto";
-            lb_id_projeto.Size = new Size(155, 15);
+            lb_id_projeto.Size = new Size(157, 15);
             lb_id_projeto.TabIndex = 14;
-            lb_id_projeto.Text = "Nome obra + Fase da obra";
+            lb_id_projeto.Text = "Nome obra + Item da obra";
             // 
             // text_qtd_item
             // 
@@ -137,6 +148,7 @@
             text_item_obra.Name = "text_item_obra";
             text_item_obra.Size = new Size(218, 23);
             text_item_obra.TabIndex = 6;
+            text_item_obra.Leave += text_item_obra_Leave;
             // 
             // label6
             // 
@@ -252,6 +264,7 @@
             grid_lista_obras.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             grid_lista_obras.Size = new Size(928, 297);
             grid_lista_obras.TabIndex = 0;
+            grid_lista_obras.CellDoubleClick += grid_lista_obras_CellDoubleClick;
             // 
             // bt_salvar_obra
             // 
@@ -303,7 +316,7 @@
             bt_cancelar_obra.Name = "bt_cancelar_obra";
             bt_cancelar_obra.Size = new Size(75, 23);
             bt_cancelar_obra.TabIndex = 16;
-            bt_cancelar_obra.Text = "Cancelar";
+            bt_cancelar_obra.Text = "Atualizar";
             bt_cancelar_obra.UseVisualStyleBackColor = true;
             bt_cancelar_obra.Click += bt_cancelar_obra_Click;
             // 
@@ -353,5 +366,6 @@
         private Button bt_filtrar_obra;
         private Label label9;
         private Button bt_fechar;
+        private Label lb_id_banco;
     }
 }
