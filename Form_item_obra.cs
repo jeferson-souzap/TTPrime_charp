@@ -18,11 +18,34 @@ namespace TTPrime_charp
         }
 
 
+        #region Metodos Carregar combobox
+
+        private void Limpar_campos()
+        {
+
+        }
+
+        private void Carregar_id_projeto()
+        {
+
+        }
 
 
+
+
+        #endregion
+
+
+        #region Metodos Salvar / Deletar / Atualizar
+        #endregion
+
+
+        #region Area dos botoes
         private void bt_fechar_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
+
     }
 }

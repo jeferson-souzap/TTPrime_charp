@@ -34,11 +34,14 @@ namespace TTPrime_charp
 
         }
 
-        private void bt_cancelar_Click(object sender, EventArgs e)
+        private void bt_cancelar_Click(object sender, EventArgs e){} //Desativado
+               
+
+        private void bt_atualizar_Click(object sender, EventArgs e)
         {
-
+            
+        
         }
-
         #endregion
     }
 }

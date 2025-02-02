@@ -9,7 +9,6 @@ namespace TTPrime_charp
         public Form_home()
         {
             InitializeComponent();
-
             Testar_banco_dados();
         }
 

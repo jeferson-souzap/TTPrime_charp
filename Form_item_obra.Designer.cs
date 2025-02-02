@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             groupBox3 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            bt_fechar = new Button();
+            bt_atualizar_item = new Button();
+            bt_deletar_item = new Button();
+            bt_salvar_item = new Button();
             groupBox1 = new GroupBox();
-            textBox2 = new TextBox();
+            text_tipo_item = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            text_descricao_item = new TextBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            combo_id_projeto = new ComboBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
-            textBox7 = new TextBox();
+            text_peso = new TextBox();
             label11 = new Label();
-            textBox6 = new TextBox();
+            text_altura = new TextBox();
             label10 = new Label();
-            textBox5 = new TextBox();
+            text_area = new TextBox();
             label9 = new Label();
-            textBox4 = new TextBox();
+            text_largura = new TextBox();
             label8 = new Label();
-            comboBox2 = new ComboBox();
+            combo_unidade_med = new ComboBox();
             label7 = new Label();
-            textBox3 = new TextBox();
+            text_qtd_item = new TextBox();
             label6 = new Label();
-            bt_fechar = new Button();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -67,9 +67,9 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(bt_fechar);
-            groupBox3.Controls.Add(button3);
-            groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(bt_atualizar_item);
+            groupBox3.Controls.Add(bt_deletar_item);
+            groupBox3.Controls.Add(bt_salvar_item);
             groupBox3.Dock = DockStyle.Bottom;
             groupBox3.Location = new Point(0, 452);
             groupBox3.Name = "groupBox3";
@@ -78,42 +78,52 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Linha de Botões";
             // 
-            // button3
+            // bt_fechar
             // 
-            button3.Location = new Point(194, 15);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 16;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
+            bt_fechar.Location = new Point(864, 15);
+            bt_fechar.Name = "bt_fechar";
+            bt_fechar.Size = new Size(75, 23);
+            bt_fechar.TabIndex = 17;
+            bt_fechar.Text = "Fechar";
+            bt_fechar.UseVisualStyleBackColor = true;
+            bt_fechar.Click += bt_fechar_Click;
             // 
-            // button2
+            // bt_atualizar_item
             // 
-            button2.Location = new Point(103, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Deletar";
-            button2.UseVisualStyleBackColor = true;
+            bt_atualizar_item.Location = new Point(194, 15);
+            bt_atualizar_item.Name = "bt_atualizar_item";
+            bt_atualizar_item.Size = new Size(75, 23);
+            bt_atualizar_item.TabIndex = 16;
+            bt_atualizar_item.Text = "Atualizar";
+            bt_atualizar_item.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bt_deletar_item
             // 
-            button1.Location = new Point(16, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 15;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
+            bt_deletar_item.Location = new Point(103, 15);
+            bt_deletar_item.Name = "bt_deletar_item";
+            bt_deletar_item.Size = new Size(75, 23);
+            bt_deletar_item.TabIndex = 2;
+            bt_deletar_item.Text = "Deletar";
+            bt_deletar_item.UseVisualStyleBackColor = true;
+            // 
+            // bt_salvar_item
+            // 
+            bt_salvar_item.Location = new Point(16, 15);
+            bt_salvar_item.Name = "bt_salvar_item";
+            bt_salvar_item.Size = new Size(75, 23);
+            bt_salvar_item.TabIndex = 15;
+            bt_salvar_item.Text = "Salvar";
+            bt_salvar_item.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(text_tipo_item);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(text_descricao_item);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(combo_id_projeto);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
@@ -122,12 +132,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cadastro";
             // 
-            // textBox2
+            // text_tipo_item
             // 
-            textBox2.Location = new Point(102, 75);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(311, 23);
-            textBox2.TabIndex = 7;
+            text_tipo_item.Location = new Point(102, 75);
+            text_tipo_item.Name = "text_tipo_item";
+            text_tipo_item.Size = new Size(311, 23);
+            text_tipo_item.TabIndex = 7;
             // 
             // label5
             // 
@@ -158,12 +168,12 @@
             label3.TabIndex = 4;
             label3.Text = "Tipo Item";
             // 
-            // textBox1
+            // text_descricao_item
             // 
-            textBox1.Location = new Point(102, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(311, 23);
-            textBox1.TabIndex = 3;
+            text_descricao_item.Location = new Point(102, 46);
+            text_descricao_item.Name = "text_descricao_item";
+            text_descricao_item.Size = new Size(311, 23);
+            text_descricao_item.TabIndex = 3;
             // 
             // label2
             // 
@@ -174,13 +184,13 @@
             label2.TabIndex = 2;
             label2.Text = "Descrição Item:";
             // 
-            // comboBox1
+            // combo_id_projeto
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(102, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(311, 23);
-            comboBox1.TabIndex = 1;
+            combo_id_projeto.FormattingEnabled = true;
+            combo_id_projeto.Location = new Point(102, 16);
+            combo_id_projeto.Name = "combo_id_projeto";
+            combo_id_projeto.Size = new Size(311, 23);
+            combo_id_projeto.TabIndex = 1;
             // 
             // label1
             // 
@@ -203,6 +213,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(3, 19);
@@ -212,17 +223,17 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox7);
+            groupBox4.Controls.Add(text_peso);
             groupBox4.Controls.Add(label11);
-            groupBox4.Controls.Add(textBox6);
+            groupBox4.Controls.Add(text_altura);
             groupBox4.Controls.Add(label10);
-            groupBox4.Controls.Add(textBox5);
+            groupBox4.Controls.Add(text_area);
             groupBox4.Controls.Add(label9);
-            groupBox4.Controls.Add(textBox4);
+            groupBox4.Controls.Add(text_largura);
             groupBox4.Controls.Add(label8);
-            groupBox4.Controls.Add(comboBox2);
+            groupBox4.Controls.Add(combo_unidade_med);
             groupBox4.Controls.Add(label7);
-            groupBox4.Controls.Add(textBox3);
+            groupBox4.Controls.Add(text_qtd_item);
             groupBox4.Controls.Add(label6);
             groupBox4.Location = new Point(463, 12);
             groupBox4.Name = "groupBox4";
@@ -231,12 +242,13 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Valores";
             // 
-            // textBox7
+            // text_peso
             // 
-            textBox7.Location = new Point(293, 78);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(98, 23);
-            textBox7.TabIndex = 17;
+            text_peso.Location = new Point(293, 78);
+            text_peso.Name = "text_peso";
+            text_peso.Size = new Size(98, 23);
+            text_peso.TabIndex = 17;
+            text_peso.Text = "0";
             // 
             // label11
             // 
@@ -247,12 +259,13 @@
             label11.TabIndex = 16;
             label11.Text = "Peso (kg)";
             // 
-            // textBox6
+            // text_altura
             // 
-            textBox6.Location = new Point(293, 46);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(98, 23);
-            textBox6.TabIndex = 15;
+            text_altura.Location = new Point(293, 46);
+            text_altura.Name = "text_altura";
+            text_altura.Size = new Size(98, 23);
+            text_altura.TabIndex = 15;
+            text_altura.Text = "0";
             // 
             // label10
             // 
@@ -263,12 +276,13 @@
             label10.TabIndex = 14;
             label10.Text = "Altura (mm)";
             // 
-            // textBox5
+            // text_area
             // 
-            textBox5.Location = new Point(111, 78);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(98, 23);
-            textBox5.TabIndex = 13;
+            text_area.Location = new Point(111, 78);
+            text_area.Name = "text_area";
+            text_area.Size = new Size(98, 23);
+            text_area.TabIndex = 13;
+            text_area.Text = "0";
             // 
             // label9
             // 
@@ -279,12 +293,13 @@
             label9.TabIndex = 12;
             label9.Text = "Área (m2)";
             // 
-            // textBox4
+            // text_largura
             // 
-            textBox4.Location = new Point(111, 49);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(98, 23);
-            textBox4.TabIndex = 11;
+            text_largura.Location = new Point(111, 49);
+            text_largura.Name = "text_largura";
+            text_largura.Size = new Size(98, 23);
+            text_largura.TabIndex = 11;
+            text_largura.Text = "0";
             // 
             // label8
             // 
@@ -295,13 +310,13 @@
             label8.TabIndex = 10;
             label8.Text = "Largura (mm)";
             // 
-            // comboBox2
+            // combo_unidade_med
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(293, 16);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(98, 23);
-            comboBox2.TabIndex = 9;
+            combo_unidade_med.FormattingEnabled = true;
+            combo_unidade_med.Location = new Point(293, 16);
+            combo_unidade_med.Name = "combo_unidade_med";
+            combo_unidade_med.Size = new Size(98, 23);
+            combo_unidade_med.TabIndex = 9;
             // 
             // label7
             // 
@@ -312,12 +327,13 @@
             label7.TabIndex = 8;
             label7.Text = "Unidade:";
             // 
-            // textBox3
+            // text_qtd_item
             // 
-            textBox3.Location = new Point(111, 16);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(98, 23);
-            textBox3.TabIndex = 8;
+            text_qtd_item.Location = new Point(111, 16);
+            text_qtd_item.Name = "text_qtd_item";
+            text_qtd_item.Size = new Size(98, 23);
+            text_qtd_item.TabIndex = 8;
+            text_qtd_item.Text = "0";
             // 
             // label6
             // 
@@ -327,16 +343,6 @@
             label6.Size = new Size(99, 15);
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
-            // 
-            // bt_fechar
-            // 
-            bt_fechar.Location = new Point(864, 15);
-            bt_fechar.Name = "bt_fechar";
-            bt_fechar.Size = new Size(75, 23);
-            bt_fechar.TabIndex = 17;
-            bt_fechar.Text = "Fechar";
-            bt_fechar.UseVisualStyleBackColor = true;
-            bt_fechar.Click += bt_fechar_Click;
             // 
             // Form_item_obra
             // 
@@ -363,32 +369,32 @@
         #endregion
 
         private GroupBox groupBox3;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button bt_atualizar_item;
+        private Button bt_deletar_item;
+        private Button bt_salvar_item;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
+        private ComboBox combo_id_projeto;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox text_tipo_item;
         private Label label5;
         private Label label4;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox text_descricao_item;
         private Label label2;
         private GroupBox groupBox4;
-        private TextBox textBox7;
+        private TextBox text_peso;
         private Label label11;
-        private TextBox textBox6;
+        private TextBox text_altura;
         private Label label10;
-        private TextBox textBox5;
+        private TextBox text_area;
         private Label label9;
-        private TextBox textBox4;
+        private TextBox text_largura;
         private Label label8;
-        private ComboBox comboBox2;
+        private ComboBox combo_unidade_med;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox text_qtd_item;
         private Label label6;
         private Button bt_fechar;
     }

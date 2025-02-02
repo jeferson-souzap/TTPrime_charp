@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             groupBox3 = new GroupBox();
+            bt_atualizar = new Button();
             bt_fechar = new Button();
-            bt_cancelar = new Button();
             bt_salvar = new Button();
             bt_iniciar = new Button();
             groupBox1 = new GroupBox();
@@ -111,8 +111,8 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(bt_atualizar);
             groupBox3.Controls.Add(bt_fechar);
-            groupBox3.Controls.Add(bt_cancelar);
             groupBox3.Controls.Add(bt_salvar);
             groupBox3.Controls.Add(bt_iniciar);
             groupBox3.Dock = DockStyle.Bottom;
@@ -123,6 +123,16 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Linha de Botões";
             // 
+            // bt_atualizar
+            // 
+            bt_atualizar.Location = new Point(198, 15);
+            bt_atualizar.Name = "bt_atualizar";
+            bt_atualizar.Size = new Size(75, 23);
+            bt_atualizar.TabIndex = 18;
+            bt_atualizar.Text = "Atualizar";
+            bt_atualizar.UseVisualStyleBackColor = true;
+            bt_atualizar.Click += bt_atualizar_Click;
+            // 
             // bt_fechar
             // 
             bt_fechar.Location = new Point(860, 15);
@@ -132,16 +142,6 @@
             bt_fechar.Text = "Fechar";
             bt_fechar.UseVisualStyleBackColor = true;
             bt_fechar.Click += bt_fechar_Click;
-            // 
-            // bt_cancelar
-            // 
-            bt_cancelar.Location = new Point(194, 15);
-            bt_cancelar.Name = "bt_cancelar";
-            bt_cancelar.Size = new Size(75, 23);
-            bt_cancelar.TabIndex = 16;
-            bt_cancelar.Text = "Cancelar";
-            bt_cancelar.UseVisualStyleBackColor = true;
-            bt_cancelar.Click += bt_cancelar_Click;
             // 
             // bt_salvar
             // 
@@ -249,9 +249,9 @@
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label8.Location = new Point(520, 16);
             label8.Name = "label8";
-            label8.Size = new Size(155, 15);
+            label8.Size = new Size(157, 15);
             label8.TabIndex = 14;
-            label8.Text = "Nome obra + Fase da obra";
+            label8.Text = "Nome obra + Item da obra";
             // 
             // textBox5
             // 
@@ -572,9 +572,9 @@
             label18.AutoSize = true;
             label18.Location = new Point(4, 19);
             label18.Name = "label18";
-            label18.Size = new Size(84, 15);
+            label18.Size = new Size(76, 15);
             label18.TabIndex = 21;
-            label18.Text = "Fases / Setores";
+            label18.Text = "Item da Obra";
             // 
             // comboBox5
             // 
@@ -823,7 +823,6 @@
         #endregion
 
         private GroupBox groupBox3;
-        private Button bt_cancelar;
         private Button bt_salvar;
         private Button bt_iniciar;
         private GroupBox groupBox1;
@@ -893,5 +892,6 @@
         private DateTimePicker dateTimePicker3;
         private Label label27;
         private Button bt_fechar;
+        private Button bt_atualizar;
     }
 }
