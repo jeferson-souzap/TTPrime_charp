@@ -53,7 +53,7 @@
             bt_deletar_obra = new Button();
             groupBox3 = new GroupBox();
             bt_fechar = new Button();
-            bt_cancelar_obra = new Button();
+            bt_atualizar_obra = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid_lista_obras).BeginInit();
@@ -289,7 +289,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(bt_fechar);
-            groupBox3.Controls.Add(bt_cancelar_obra);
+            groupBox3.Controls.Add(bt_atualizar_obra);
             groupBox3.Controls.Add(bt_deletar_obra);
             groupBox3.Controls.Add(bt_salvar_obra);
             groupBox3.Dock = DockStyle.Bottom;
@@ -310,15 +310,15 @@
             bt_fechar.UseVisualStyleBackColor = true;
             bt_fechar.Click += bt_fechar_Click;
             // 
-            // bt_cancelar_obra
+            // bt_atualizar_obra
             // 
-            bt_cancelar_obra.Location = new Point(194, 15);
-            bt_cancelar_obra.Name = "bt_cancelar_obra";
-            bt_cancelar_obra.Size = new Size(75, 23);
-            bt_cancelar_obra.TabIndex = 16;
-            bt_cancelar_obra.Text = "Atualizar";
-            bt_cancelar_obra.UseVisualStyleBackColor = true;
-            bt_cancelar_obra.Click += bt_cancelar_obra_Click;
+            bt_atualizar_obra.Location = new Point(194, 15);
+            bt_atualizar_obra.Name = "bt_atualizar_obra";
+            bt_atualizar_obra.Size = new Size(75, 23);
+            bt_atualizar_obra.TabIndex = 16;
+            bt_atualizar_obra.Text = "Atualizar";
+            bt_atualizar_obra.UseVisualStyleBackColor = true;
+            bt_atualizar_obra.Click += bt_cancelar_obra_Click;
             // 
             // Form_cadastro_obra
             // 
@@ -361,7 +361,7 @@
         private TextBox text_item_obra;
         private Label label6;
         private GroupBox groupBox3;
-        private Button bt_cancelar_obra;
+        private Button bt_atualizar_obra;
         private DataGridView grid_lista_obras;
         private Button bt_filtrar_obra;
         private Label label9;

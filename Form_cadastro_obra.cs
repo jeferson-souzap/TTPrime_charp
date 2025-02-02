@@ -77,7 +77,7 @@ namespace TTPrime_charp
                         while (myreader.Read())
                         {
                             combo_status_obra.Items.Add(myreader["status_obra"].ToString());
-                            //combo_empresa.Items.Add(myreader["nome_empresa"].ToString());
+                            
                         }
                     }
 
@@ -94,7 +94,7 @@ namespace TTPrime_charp
 
         }
 
-        #endregion Controles
+        #endregion
 
 
         #region Metodos Salvar / Cancelar / Deletar / Carregar
@@ -103,7 +103,7 @@ namespace TTPrime_charp
         private void Limpar_controles()
         {
             date_cadastro_obra.Value = DateTime.Now;
-            combo_status_obra.Text = string.Empty;
+            combo_status_obra.Text = "Orçamento";
             text_nome_obra.Text = string.Empty;
             text_cliente_obra.Text = string.Empty;
             text_id_obra.Text = string.Empty;
@@ -111,7 +111,6 @@ namespace TTPrime_charp
             text_qtd_item.Text = "0";
             lb_id_projeto.Text = string.Empty;
         }
-
 
         private bool Verificar_campos_vazios(params System.Windows.Forms.TextBox[] textBoxes)
         {
@@ -168,7 +167,6 @@ namespace TTPrime_charp
 
         }
 
-
         private void Salvar_obra_db()
         {
 
@@ -223,14 +221,107 @@ namespace TTPrime_charp
             }
         }
 
-        private void Editar_obra()
+        private void Atualizar_obra(string id_obra_db)
         {
+            DateTime dt_entrada = date_cadastro_obra.Value.Date;
+            string status = combo_status_obra.Text.ToUpper();
+            string nome_obra = text_nome_obra.Text.ToUpper();
+            string nome_cliente = text_cliente_obra.Text.ToUpper();
+            string id_obra = text_id_obra.Text.ToUpper();
+            string item_obra = text_item_obra.Text.ToUpper();
+            double qtd_itens = Convert.ToDouble(text_qtd_item.Text);
+            string id_projeto = lb_id_projeto.Text.ToUpper();
+
+            try
+            {
+                string conecta_string = Properties.Settings.Default.string_db;
+                MySqlConnection connection = new MySqlConnection(conecta_string);
+
+
+                string comando_sql;
+
+                comando_sql = "UPDATE tb_cad_obra SET " +
+                     "status = @status, " +
+                     "dt_entrada = @dt_entrada, " +
+                     "nome_obra = @nome_obra, " +
+                     "nome_cliente = @nome_cliente, " +
+                     "id_obra = @id_obra, " +
+                     "item_obra = @item_obra, " +
+                     "qtd_itens = @qtd_itens, " +
+                     "id_projeto = @id_projeto " +
+                     "WHERE id =" + Convert.ToInt32(id_obra_db) + "";
+
+
+
+                using (MySqlCommand cmd = new MySqlCommand(comando_sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@status", status);
+                    cmd.Parameters.AddWithValue("@dt_entrada", dt_entrada.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@nome_obra", nome_obra);
+                    cmd.Parameters.AddWithValue("@nome_cliente", nome_cliente);
+                    cmd.Parameters.AddWithValue("@id_obra", id_obra);
+                    cmd.Parameters.AddWithValue("@item_obra", item_obra);
+                    cmd.Parameters.AddWithValue("@qtd_itens", Convert.ToString(qtd_itens).Replace(',', '.'));
+                    cmd.Parameters.AddWithValue("@id_projeto", id_projeto);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+
+
+                    MessageBox.Show("Atualizado com Sucesso!!");
+                    Limpar_controles();
+                }
+
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.Message + "\r\n Erro ao Atualizar o apontamento");
+                return;
+
+            }
 
         }
 
-        private void Deletar_obra()
+        private void Deletar_obra(string id_obra_db)
         {
+            try
+            {
+                string conecta_string = Properties.Settings.Default.string_db;
+                using (MySqlConnection connection = new MySqlConnection(conecta_string))
 
+                {
+                    
+                    string comando_sql = "DELETE FROM tb_cad_obra WHERE id = @id_obra_db";
+
+                    using (MySqlCommand cmd = new MySqlCommand(comando_sql, connection))
+                    {
+                        // Adiciona o parâmetro para o id da obra a ser deletada
+                        cmd.Parameters.AddWithValue("@id_obra_db", Convert.ToInt32(id_obra_db));
+
+                        connection.Open();
+                        int linhasAfetadas = cmd.ExecuteNonQuery(); // Executa o comando
+
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Registro deletado com sucesso!");
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nenhum registro encontrado para deletar.");
+                        }
+                    }
+                }
+
+
+
+
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.Message + "\r\n Erro ao Deletar o apontamento");
+            }
         }
 
         #endregion
@@ -261,13 +352,35 @@ namespace TTPrime_charp
 
         private void bt_deletar_obra_Click(object sender, EventArgs e)
         {
-
+            Deletar_obra(lb_id_banco.Text);
+            Carregar_grid_obras();
+            lb_id_banco.Text = "0";
         }
 
         private void bt_cancelar_obra_Click(object sender, EventArgs e)
         {
+            // Botao de atualizar
+            
+            string mensagem = "Você deseja continuar?";
+            string titulo = "Confirmação";
+            DialogResult resultado = MessageBox.Show(mensagem, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                
+                Atualizar_obra(lb_id_banco.Text);
+                Carregar_grid_obras();
+            }
+            else
+            {
+                
+                return;
+            }
 
         }
+
+
+
         #endregion
 
 
@@ -276,12 +389,13 @@ namespace TTPrime_charp
 
         private void text_item_obra_Leave(object sender, EventArgs e)
         {
-            lb_id_projeto.Text = text_nome_obra.Text + text_item_obra.Text;
+            lb_id_projeto.Text = "OBR - " + text_nome_obra.Text + " - " +text_item_obra.Text;
         }
 
         private void grid_lista_obras_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string id_banco_obra = grid_lista_obras.CurrentRow.Cells[0].Value.ToString();
+            lb_id_banco.Text = id_banco_obra.ToString();
             Carregar_campos_obra(id_banco_obra);
             
 
