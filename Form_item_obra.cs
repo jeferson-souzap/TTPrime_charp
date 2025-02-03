@@ -132,5 +132,14 @@ namespace TTPrime_charp
         }
         #endregion
 
+        private void text_altura_Leave(object sender, EventArgs e)
+        {
+            double valor_perimetro;
+
+            valor_perimetro = Convert.ToDouble(text_largura.Text) + Convert.ToDouble(text_altura.Text);
+
+            text_perimetro.Text = valor_perimetro.ToString("F2");
+
+        }
     }
 }

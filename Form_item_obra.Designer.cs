@@ -45,6 +45,8 @@
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
+            text_perimetro = new TextBox();
+            label12 = new Label();
             text_peso = new TextBox();
             label11 = new Label();
             text_altura = new TextBox();
@@ -57,8 +59,6 @@
             label7 = new Label();
             text_qtd_item = new TextBox();
             label6 = new Label();
-            textBox1 = new TextBox();
-            label12 = new Label();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -225,7 +225,7 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox1);
+            groupBox4.Controls.Add(text_perimetro);
             groupBox4.Controls.Add(label12);
             groupBox4.Controls.Add(text_peso);
             groupBox4.Controls.Add(label11);
@@ -245,6 +245,23 @@
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Valores";
+            // 
+            // text_perimetro
+            // 
+            text_perimetro.Location = new Point(111, 106);
+            text_perimetro.Name = "text_perimetro";
+            text_perimetro.Size = new Size(98, 23);
+            text_perimetro.TabIndex = 19;
+            text_perimetro.Text = "0";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(6, 109);
+            label12.Name = "label12";
+            label12.Size = new Size(59, 15);
+            label12.TabIndex = 18;
+            label12.Text = "Perimetro";
             // 
             // text_peso
             // 
@@ -270,6 +287,7 @@
             text_altura.Size = new Size(98, 23);
             text_altura.TabIndex = 15;
             text_altura.Text = "0";
+            text_altura.Leave += text_altura_Leave;
             // 
             // label10
             // 
@@ -348,23 +366,6 @@
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(111, 106);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(98, 23);
-            textBox1.TabIndex = 19;
-            textBox1.Text = "0";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(6, 109);
-            label12.Name = "label12";
-            label12.Size = new Size(59, 15);
-            label12.TabIndex = 18;
-            label12.Text = "Perimetro";
-            // 
             // Form_item_obra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -418,7 +419,7 @@
         private TextBox text_qtd_item;
         private Label label6;
         private Button bt_fechar;
-        private TextBox textBox1;
+        private TextBox text_perimetro;
         private Label label12;
     }
 }
