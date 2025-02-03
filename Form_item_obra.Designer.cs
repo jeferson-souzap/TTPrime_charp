@@ -57,6 +57,8 @@
             label7 = new Label();
             text_qtd_item = new TextBox();
             label6 = new Label();
+            textBox1 = new TextBox();
+            label12 = new Label();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -223,6 +225,8 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(textBox1);
+            groupBox4.Controls.Add(label12);
             groupBox4.Controls.Add(text_peso);
             groupBox4.Controls.Add(label11);
             groupBox4.Controls.Add(text_altura);
@@ -344,6 +348,23 @@
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(111, 106);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(98, 23);
+            textBox1.TabIndex = 19;
+            textBox1.Text = "0";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(6, 109);
+            label12.Name = "label12";
+            label12.Size = new Size(59, 15);
+            label12.TabIndex = 18;
+            label12.Text = "Perimetro";
+            // 
             // Form_item_obra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -397,5 +418,7 @@
         private TextBox text_qtd_item;
         private Label label6;
         private Button bt_fechar;
+        private TextBox textBox1;
+        private Label label12;
     }
 }
