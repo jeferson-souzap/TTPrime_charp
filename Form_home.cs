@@ -1,6 +1,7 @@
 using System.Configuration;
 using System;
 using MySqlConnector;
+using System.Reflection;
 
 namespace TTPrime_charp
 {
@@ -8,6 +9,9 @@ namespace TTPrime_charp
     {
         public Form_home()
         {
+            
+            //lb_versao_app.Text = Application.ProductVersion;
+
             InitializeComponent();
             Testar_banco_dados();
         }

@@ -314,9 +314,6 @@ namespace TTPrime_charp
                     }
                 }
 
-
-
-
             }
             catch (Exception Erro)
             {

@@ -39,6 +39,7 @@
             bt_cadastro_obra = new Button();
             pictureBox1 = new PictureBox();
             panel_central = new Panel();
+            lb_versao_app = new Label();
             panel_inferior.SuspendLayout();
             panel_esquerdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -46,6 +47,7 @@
             // 
             // panel_inferior
             // 
+            panel_inferior.Controls.Add(lb_versao_app);
             panel_inferior.Controls.Add(lb_status_banco);
             panel_inferior.Dock = DockStyle.Bottom;
             panel_inferior.Location = new Point(0, 558);
@@ -154,6 +156,15 @@
             panel_central.Size = new Size(992, 558);
             panel_central.TabIndex = 2;
             // 
+            // lb_versao_app
+            // 
+            lb_versao_app.AutoSize = true;
+            lb_versao_app.Location = new Point(12, 6);
+            lb_versao_app.Name = "lb_versao_app";
+            lb_versao_app.Size = new Size(64, 15);
+            lb_versao_app.TabIndex = 1;
+            lb_versao_app.Text = "Versao app";
+            // 
             // Form_home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -185,5 +196,6 @@
         private Button bt_configuracao;
         private Button bt_historico_obra;
         private Label lb_status_banco;
+        private Label lb_versao_app;
     }
 }

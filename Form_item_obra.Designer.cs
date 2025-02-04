@@ -36,14 +36,14 @@
             groupBox1 = new GroupBox();
             text_tipo_item = new TextBox();
             label5 = new Label();
-            label4 = new Label();
+            lb_item_descricao = new Label();
             label3 = new Label();
             text_descricao_item = new TextBox();
             label2 = new Label();
             combo_id_projeto = new ComboBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            grid_lista_item_obra = new DataGridView();
             groupBox4 = new GroupBox();
             text_perimetro = new TextBox();
             label12 = new Label();
@@ -59,10 +59,11 @@
             label7 = new Label();
             text_qtd_item = new TextBox();
             label6 = new Label();
+            lb_id_item_obra = new Label();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)grid_lista_item_obra).BeginInit();
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             bt_atualizar_item.TabIndex = 16;
             bt_atualizar_item.Text = "Atualizar";
             bt_atualizar_item.UseVisualStyleBackColor = true;
+            bt_atualizar_item.Click += bt_atualizar_item_Click;
             // 
             // bt_deletar_item
             // 
@@ -107,6 +109,7 @@
             bt_deletar_item.TabIndex = 2;
             bt_deletar_item.Text = "Deletar";
             bt_deletar_item.UseVisualStyleBackColor = true;
+            bt_deletar_item.Click += bt_deletar_item_Click;
             // 
             // bt_salvar_item
             // 
@@ -116,12 +119,13 @@
             bt_salvar_item.TabIndex = 15;
             bt_salvar_item.Text = "Salvar";
             bt_salvar_item.UseVisualStyleBackColor = true;
+            bt_salvar_item.Click += bt_salvar_item_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(text_tipo_item);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(lb_item_descricao);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(text_descricao_item);
             groupBox1.Controls.Add(label2);
@@ -150,16 +154,16 @@
             label5.TabIndex = 6;
             label5.Text = "Tipo do Item";
             // 
-            // label4
+            // lb_item_descricao
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(102, 109);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 15);
-            label4.TabIndex = 5;
-            label4.Text = "Item + descricao";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            lb_item_descricao.AutoSize = true;
+            lb_item_descricao.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_item_descricao.Location = new Point(102, 109);
+            lb_item_descricao.Name = "lb_item_descricao";
+            lb_item_descricao.Size = new Size(100, 15);
+            lb_item_descricao.TabIndex = 5;
+            lb_item_descricao.Text = "Item + descricao";
+            lb_item_descricao.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -188,6 +192,7 @@
             // 
             // combo_id_projeto
             // 
+            combo_id_projeto.AutoCompleteMode = AutoCompleteMode.Suggest;
             combo_id_projeto.FormattingEnabled = true;
             combo_id_projeto.Location = new Point(102, 16);
             combo_id_projeto.Name = "combo_id_projeto";
@@ -205,7 +210,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(grid_lista_item_obra);
             groupBox2.Location = new Point(12, 165);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(930, 281);
@@ -213,18 +218,19 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Lista de materias";
             // 
-            // dataGridView1
+            // grid_lista_item_obra
             // 
-            dataGridView1.BackgroundColor = SystemColors.ControlLight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 19);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(924, 259);
-            dataGridView1.TabIndex = 1;
+            grid_lista_item_obra.BackgroundColor = SystemColors.ControlLight;
+            grid_lista_item_obra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid_lista_item_obra.Dock = DockStyle.Fill;
+            grid_lista_item_obra.Location = new Point(3, 19);
+            grid_lista_item_obra.Name = "grid_lista_item_obra";
+            grid_lista_item_obra.Size = new Size(924, 259);
+            grid_lista_item_obra.TabIndex = 1;
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(lb_id_item_obra);
             groupBox4.Controls.Add(text_perimetro);
             groupBox4.Controls.Add(label12);
             groupBox4.Controls.Add(text_peso);
@@ -366,6 +372,15 @@
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
             // 
+            // lb_id_item_obra
+            // 
+            lb_id_item_obra.AutoSize = true;
+            lb_id_item_obra.Location = new Point(401, 19);
+            lb_id_item_obra.Name = "lb_id_item_obra";
+            lb_id_item_obra.Size = new Size(18, 15);
+            lb_id_item_obra.TabIndex = 20;
+            lb_id_item_obra.Text = "ID";
+            // 
             // Form_item_obra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -382,7 +397,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grid_lista_item_obra).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             ResumeLayout(false);
@@ -396,12 +411,12 @@
         private Button bt_salvar_item;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private DataGridView dataGridView1;
+        private DataGridView grid_lista_item_obra;
         private ComboBox combo_id_projeto;
         private Label label1;
         private TextBox text_tipo_item;
         private Label label5;
-        private Label label4;
+        private Label lb_item_descricao;
         private Label label3;
         private TextBox text_descricao_item;
         private Label label2;
@@ -421,5 +436,6 @@
         private Button bt_fechar;
         private TextBox text_perimetro;
         private Label label12;
+        private Label lb_id_item_obra;
     }
 }
