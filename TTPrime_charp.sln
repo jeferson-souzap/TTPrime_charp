@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTPrime_charp", "TTPrime_charp.csproj", "{8EC082E2-938A-4E5C-A2B5-A6FFAC0F98BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTPrime_charp", "TTPrime_charp.csproj", "{8EC082E2-938A-4E5C-A2B5-A6FFAC0F98BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRIME_WEB", "..\PRIME_WEB\PRIME_WEB.csproj", "{D1BCA3BF-5206-4581-A89D-C248CFB31AAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTPrime_web", "..\TTPrime_web\TTPrime_web.csproj", "{5D95DE70-AF66-4BC7-AC78-CF7A88CCCB99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8EC082E2-938A-4E5C-A2B5-A6FFAC0F98BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EC082E2-938A-4E5C-A2B5-A6FFAC0F98BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EC082E2-938A-4E5C-A2B5-A6FFAC0F98BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1BCA3BF-5206-4581-A89D-C248CFB31AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1BCA3BF-5206-4581-A89D-C248CFB31AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1BCA3BF-5206-4581-A89D-C248CFB31AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1BCA3BF-5206-4581-A89D-C248CFB31AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D95DE70-AF66-4BC7-AC78-CF7A88CCCB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D95DE70-AF66-4BC7-AC78-CF7A88CCCB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D95DE70-AF66-4BC7-AC78-CF7A88CCCB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D95DE70-AF66-4BC7-AC78-CF7A88CCCB99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

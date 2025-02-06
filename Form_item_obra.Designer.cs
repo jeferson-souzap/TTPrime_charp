@@ -45,6 +45,7 @@
             groupBox2 = new GroupBox();
             grid_lista_item_obra = new DataGridView();
             groupBox4 = new GroupBox();
+            lb_id_item_obra = new Label();
             text_perimetro = new TextBox();
             label12 = new Label();
             text_peso = new TextBox();
@@ -59,7 +60,6 @@
             label7 = new Label();
             text_qtd_item = new TextBox();
             label6 = new Label();
-            lb_id_item_obra = new Label();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -144,6 +144,7 @@
             text_tipo_item.Name = "text_tipo_item";
             text_tipo_item.Size = new Size(311, 23);
             text_tipo_item.TabIndex = 7;
+            text_tipo_item.Leave += text_tipo_item_Leave;
             // 
             // label5
             // 
@@ -251,6 +252,15 @@
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Valores";
+            // 
+            // lb_id_item_obra
+            // 
+            lb_id_item_obra.AutoSize = true;
+            lb_id_item_obra.Location = new Point(401, 19);
+            lb_id_item_obra.Name = "lb_id_item_obra";
+            lb_id_item_obra.Size = new Size(18, 15);
+            lb_id_item_obra.TabIndex = 20;
+            lb_id_item_obra.Text = "ID";
             // 
             // text_perimetro
             // 
@@ -371,15 +381,6 @@
             label6.Size = new Size(99, 15);
             label6.TabIndex = 3;
             label6.Text = "Quantidade Item:";
-            // 
-            // lb_id_item_obra
-            // 
-            lb_id_item_obra.AutoSize = true;
-            lb_id_item_obra.Location = new Point(401, 19);
-            lb_id_item_obra.Name = "lb_id_item_obra";
-            lb_id_item_obra.Size = new Size(18, 15);
-            lb_id_item_obra.TabIndex = 20;
-            lb_id_item_obra.Text = "ID";
             // 
             // Form_item_obra
             // 

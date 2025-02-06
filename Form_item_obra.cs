@@ -162,7 +162,7 @@ namespace TTPrime_charp
 
                 string comando_sql;
 
-                comando_sql = "INSERT INTO tb_cad_obra(id_projeto, descricao_item, tipo_item, item_completo, quantidade, L, H, area, peso, und_medida) " +
+                comando_sql = "INSERT INTO tb_lista_itens(id_projeto, descricao_item, tipo_item, item_completo, quantidade, L, H, area, peso, und_medida) " +
                          "VALUES(@id_projeto, @descricao_item, @tipo_item, @item_completo, @quantidade, @L, @H, @area, @peso, @und_medida)";
 
 
@@ -235,7 +235,7 @@ namespace TTPrime_charp
             {
                 MessageBox.Show(Erro.Message + "\r\n Erro ao Deletar o Item");
             }
-           
+
         }
 
         private void Atualizar_item_obra(string id_item_obra)
@@ -303,7 +303,7 @@ namespace TTPrime_charp
                 return;
 
             }
-            
+
         }
 
 
@@ -350,6 +350,9 @@ namespace TTPrime_charp
 
         }
 
-
+        private void text_tipo_item_Leave(object sender, EventArgs e)
+        {
+            lb_item_descricao.Text = text_descricao_item.Text + " - " + text_tipo_item.Text;
+        }
     }
 }
