@@ -96,7 +96,7 @@
             bt_atualizar_item.Location = new Point(194, 15);
             bt_atualizar_item.Name = "bt_atualizar_item";
             bt_atualizar_item.Size = new Size(75, 23);
-            bt_atualizar_item.TabIndex = 16;
+            bt_atualizar_item.TabIndex = 13;
             bt_atualizar_item.Text = "Atualizar";
             bt_atualizar_item.UseVisualStyleBackColor = true;
             bt_atualizar_item.Click += bt_atualizar_item_Click;
@@ -106,7 +106,7 @@
             bt_deletar_item.Location = new Point(103, 15);
             bt_deletar_item.Name = "bt_deletar_item";
             bt_deletar_item.Size = new Size(75, 23);
-            bt_deletar_item.TabIndex = 2;
+            bt_deletar_item.TabIndex = 12;
             bt_deletar_item.Text = "Deletar";
             bt_deletar_item.UseVisualStyleBackColor = true;
             bt_deletar_item.Click += bt_deletar_item_Click;
@@ -116,7 +116,7 @@
             bt_salvar_item.Location = new Point(16, 15);
             bt_salvar_item.Name = "bt_salvar_item";
             bt_salvar_item.Size = new Size(75, 23);
-            bt_salvar_item.TabIndex = 15;
+            bt_salvar_item.TabIndex = 11;
             bt_salvar_item.Text = "Salvar";
             bt_salvar_item.UseVisualStyleBackColor = true;
             bt_salvar_item.Click += bt_salvar_item_Click;
@@ -143,7 +143,7 @@
             text_tipo_item.Location = new Point(102, 75);
             text_tipo_item.Name = "text_tipo_item";
             text_tipo_item.Size = new Size(311, 23);
-            text_tipo_item.TabIndex = 7;
+            text_tipo_item.TabIndex = 3;
             text_tipo_item.Leave += text_tipo_item_Leave;
             // 
             // label5
@@ -180,7 +180,7 @@
             text_descricao_item.Location = new Point(102, 46);
             text_descricao_item.Name = "text_descricao_item";
             text_descricao_item.Size = new Size(311, 23);
-            text_descricao_item.TabIndex = 3;
+            text_descricao_item.TabIndex = 2;
             // 
             // label2
             // 
@@ -267,7 +267,7 @@
             text_perimetro.Location = new Point(111, 106);
             text_perimetro.Name = "text_perimetro";
             text_perimetro.Size = new Size(98, 23);
-            text_perimetro.TabIndex = 19;
+            text_perimetro.TabIndex = 10;
             text_perimetro.Text = "0";
             // 
             // label12
@@ -284,7 +284,7 @@
             text_peso.Location = new Point(293, 78);
             text_peso.Name = "text_peso";
             text_peso.Size = new Size(98, 23);
-            text_peso.TabIndex = 17;
+            text_peso.TabIndex = 9;
             text_peso.Text = "0";
             // 
             // label11
@@ -301,7 +301,7 @@
             text_altura.Location = new Point(293, 46);
             text_altura.Name = "text_altura";
             text_altura.Size = new Size(98, 23);
-            text_altura.TabIndex = 15;
+            text_altura.TabIndex = 7;
             text_altura.Text = "0";
             text_altura.Leave += text_altura_Leave;
             // 
@@ -319,7 +319,7 @@
             text_area.Location = new Point(111, 78);
             text_area.Name = "text_area";
             text_area.Size = new Size(98, 23);
-            text_area.TabIndex = 13;
+            text_area.TabIndex = 8;
             text_area.Text = "0";
             // 
             // label9
@@ -336,7 +336,7 @@
             text_largura.Location = new Point(111, 49);
             text_largura.Name = "text_largura";
             text_largura.Size = new Size(98, 23);
-            text_largura.TabIndex = 11;
+            text_largura.TabIndex = 6;
             text_largura.Text = "0";
             // 
             // label8
@@ -354,7 +354,7 @@
             combo_unidade_med.Location = new Point(293, 16);
             combo_unidade_med.Name = "combo_unidade_med";
             combo_unidade_med.Size = new Size(98, 23);
-            combo_unidade_med.TabIndex = 9;
+            combo_unidade_med.TabIndex = 5;
             // 
             // label7
             // 
@@ -370,7 +370,7 @@
             text_qtd_item.Location = new Point(111, 16);
             text_qtd_item.Name = "text_qtd_item";
             text_qtd_item.Size = new Size(98, 23);
-            text_qtd_item.TabIndex = 8;
+            text_qtd_item.TabIndex = 4;
             text_qtd_item.Text = "0";
             // 
             // label6
